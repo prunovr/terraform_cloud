@@ -11,6 +11,6 @@ output "region_name" {
   value = data.aws_region.current.endpoint
 }
 output "public_ip" {
-  value = aws_instance.web.public_ip
+  value = aws_instance.web[count.index].public_ip
 
 }
